@@ -1,3 +1,3 @@
 export class Carro {
-constructor() {}
+  constructor() {}
 }
