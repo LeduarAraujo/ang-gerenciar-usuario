@@ -11,17 +11,24 @@ import { Usuario } from 'src/app/core/models/usuario.model';
 })
 export class LoginComponent {
 
-  usuario: Usuario = new Usuario();
+  usuario: Usuario = new Usuario;
+  msgErro: string = '';
 
   constructor(
       private atomicoService: AtomicoService,
       private router: Router
     ) {}
 
-  iniciarSessao(formCadastro: NgForm) {
-    const token = this.atomicoService.login(this.usuario.login,
-      this.usuario.password);
-      debugger
-      console.log(token);
+  iniciarSessao(formLogin: NgForm) {
+    this.atomicoService.login(
+      this.usuario.login,
+      this.usuario.password
+    ).subscribe(
+      (retorno: string) =>
+      this.router.navigate(['home'],
+        {state: JSON.parse(JSON.stringify(retorno))}
+      ),
+      err => this.msgErro = err.error.message
+    );
   }
 }

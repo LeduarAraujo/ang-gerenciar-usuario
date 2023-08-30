@@ -7,8 +7,6 @@ import { Adapter } from "../adapter";
 export class TokenAdapter implements Adapter<string>{
   adapt(item: any): string {
     // TODO: Verificar oque será retornado aqui no item.
-      const usuario = item;
-
-      return usuario;
+      return item;
   }
 }

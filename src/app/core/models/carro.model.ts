@@ -1,3 +1,7 @@
 export class Carro {
-  constructor() {}
+  id: string;
+  carYear: number;
+  licensePlate: string;
+  model: string;
+  color: string;
 }

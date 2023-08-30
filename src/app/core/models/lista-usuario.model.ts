@@ -1,5 +1,5 @@
 import { Usuario } from "./usuario.model";
 
-export interface ListaUsuario {
+export class ListaUsuario {
   listUser: Usuario[];
 }

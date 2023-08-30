@@ -1,1 +1,64 @@
-<p>cadastro works!</p>
+<div class="sidenav">
+  <div class="login-main-text">
+    <a routerLink="">
+      <img class="imgSideNav"
+        src="./../../../assets/img/Commercial_Event_Animated_Logo_in_Black_White_Bold_Gradient_Style.gif">
+    </a>
+    <p>Tudo oque você precisar temos aqui.</p>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+    <div class="login-form">
+      <form #formCadastro="ngForm" (ngSubmit)="cadastrar(formCadastro)">
+        <div class="form-group">
+          <label>Login</label>
+          <input [(ngModel)]="usuario.login" type="text" name="login" id="login" class="form-control input_user"
+            placeholder="Usuário">
+        </div>
+        <div class="form-group">
+          <label>Senha</label>
+          <input [(ngModel)]="usuario.password" type="password" name="password" id="password"
+            class="form-control input_pass" placeholder="Senha">
+        </div>
+        <div class="form-group">
+          <label>Login</label>
+          <input [(ngModel)]="usuario.login" type="text" name="login" id="login" class="form-control input_user"
+            placeholder="Usuário">
+        </div>
+        <div class="form-group">
+          <label>Login</label>
+          <input [(ngModel)]="usuario.login" type="text" name="login" id="login" class="form-control input_user"
+            placeholder="Usuário">
+        </div>
+        <div class="form-group">
+          <label>Login</label>
+          <input [(ngModel)]="usuario.login" type="text" name="login" id="login" class="form-control input_user"
+            placeholder="Usuário">
+        </div>
+        <div class="form-group">
+          <label>Login</label>
+          <input [(ngModel)]="usuario.login" type="text" name="login" id="login" class="form-control input_user"
+            placeholder="Usuário">
+        </div>
+        <div class="form-group">
+          <label>Login</label>
+          <input [(ngModel)]="usuario.login" type="text" name="login" id="login" class="form-control input_user"
+            placeholder="Usuário">
+        </div>
+        <div class="form-group">
+          <label>Login</label>
+          <input [(ngModel)]="usuario.login" type="text" name="login" id="login" class="form-control input_user"
+            placeholder="Usuário">
+        </div>
+
+        <div class="spaceTopButtom">
+
+          <a routerLink="" class="spaceButtomVoltar">	&lt; Voltar</a>
+
+              <button type="submit" class="btn btn-black">Entrar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
