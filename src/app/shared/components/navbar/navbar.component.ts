@@ -19,7 +19,6 @@ export class NavbarComponent {
   ) { this.validarSessao() }
 
   validarSessao() {
-    debugger
     this.token = (this.router.getCurrentNavigation()?.extras.state as {
       token_jwt: string
     });
