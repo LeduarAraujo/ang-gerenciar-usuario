@@ -30,7 +30,6 @@ export class CadastroComponent {
         },
         err => alert(err.error.message)
       );
-
   }
 
 }
