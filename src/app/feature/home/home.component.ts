@@ -11,6 +11,7 @@ import { AtomicoService } from 'src/app/core/services/atomico.service';
 export class HomeComponent {
 
   usuario: Usuario = new Usuario();
+  token: { token_jwt: string };
 
   constructor(
     private router: Router,
@@ -19,25 +20,20 @@ export class HomeComponent {
   }
 
   validarSessao() {
-    let token = (this.router.getCurrentNavigation()?.extras.state as {
+    this.token = (this.router.getCurrentNavigation()?.extras.state as {
       token_jwt: string
     });
 
-    if (token) {
-      this.atomService.getUsuarioLogado(token.token_jwt).subscribe(
-        (retorno: Usuario) => this.prepararSessao(retorno, token.token_jwt),
-        err => this.router.navigate(['login'])
+    if (this.token) {
+      this.atomService.getUsuarioLogado(this.token.token_jwt).subscribe(
+        (retorno: Usuario) => {
+          this.usuario = retorno;
+          this.router.navigate([], {state: this.token});
+        },
+        err => this.router.navigate(['/login'])
       );
     } else {
-      this.router.navigate(['login']);
+      this.router.navigate(['/login']);
     }
-  }
-
-  prepararSessao(retorno: Usuario, token: string) {
-    this.router.navigate(['home'],
-      { state: {'usuario': JSON.parse(JSON.stringify(retorno)), 'token': token} }
-    );
-
-    this.usuario = retorno;
   }
 }
