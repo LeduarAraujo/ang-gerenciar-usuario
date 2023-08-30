@@ -1,27 +1,25 @@
-<app-navbar [usuario]='usuario' ></app-navbar>
+<app-navbar [usuario]='usuario'></app-navbar>
 
-<div class="">
-  <!-- <img class="container imgHome" src="./../../../assets/img/undraw_electric_car_b-7-hl.svg" alt=""> -->
-  <div class="container tabela-lista-usuario text-center">
-    <div class="row row-cols-8 tb-Titulo">
-      <div class="col tb-Titulo-right">Código de Usuário</div>
-      <div class="col tb-Titulo-right">Nome</div>
-      <div class="col tb-Titulo-right">Email</div>
-      <div class="col tb-Titulo-right">Data Nascimento</div>
-      <div class="col tb-Titulo-right">Login</div>
-      <div class="col tb-Titulo-right">Telefone</div>
-      <div class="col tb-Titulo-right">Data de criação</div>
-      <div class="col">Data de ultimo login</div>
-    </div>
-    <div *ngFor="let item of listaUsuarios.listUser" class="row row-cols-8 tb-row">
-      <div class="col tb-Titulo-right">{{item.idUsuario}}</div>
-      <div class="col tb-Titulo-right">{{item.firstName + ' ' + item.lastName}}</div>
-      <div class="col tb-Titulo-right">{{item.email}}</div>
-      <div class="col tb-Titulo-right">{{item.birthday}}</div>
-      <div class="col tb-Titulo-right">{{item.login}}</div>
-      <div class="col tb-Titulo-right">{{item.phone}}</div>
-      <div class="col tb-Titulo-right">{{formatarData(item.createdAt)}}</div>
-      <div class="col">{{formatarDataHora(item.lastLogin)}}</div>
-    </div>
-  </div>
-</div>
+<h1 class="container margem-titulo">Lista de usuários</h1>
+<table class="container">
+  <tr class="container tabela-lista-usuario text-center">
+    <td class="p-4 mb-5 text-bg-secondary">Código</td>
+    <td class="p-4 mb-5 text-bg-secondary">Nome</td>
+    <td class="p-4 mb-5 text-bg-secondary">Email</td>
+    <td class="p-4 mb-5 text-bg-secondary">Nascimento</td>
+    <td class="p-4 mb-5 text-bg-secondary">Login</td>
+    <td class="p-4 mb-5 text-bg-secondary">Telefone</td>
+    <td class="p-4 mb-5 text-bg-secondary">Data de Cadastro</td>
+    <td class="p-4 mb-5 text-bg-secondary">Ultimo Login</td>
+  </tr>
+  <tr *ngFor="let item of listaUsuarios.listUser" class="container text-center border border-primary-subtle">
+    <td class="p-2">{{item.idUsuario}}</td>
+    <td class="p-2">{{item.firstName}}</td>
+    <td class="p-2">{{item.email}}</td>
+    <td class="p-2">{{item.birthday}}</td>
+    <td class="p-2">{{item.login}}</td>
+    <td class="p-2">{{item.phone}}</td>
+    <td class="p-2">{{formatarData(item.createdAt)}}</td>
+    <td class="p-2">{{formatarData(item.lastLogin)}}</td>
+  </tr>
+</table>

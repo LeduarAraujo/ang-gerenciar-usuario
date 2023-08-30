@@ -55,10 +55,10 @@ export class ListarUsuarioComponent {
   }
 
   formatarData(data: Date) {
-    return (new Date(data)).toLocaleDateString('pt-BR');
+    return data ? (new Date(data)).toLocaleDateString('pt-BR') : '';
   }
 
   formatarDataHora(data: Date) {
-    return (new Date(data)).toLocaleTimeString('pt-BR');
+    return data ? (new Date(data)).toLocaleTimeString('pt-BR') : '';
   }
 }

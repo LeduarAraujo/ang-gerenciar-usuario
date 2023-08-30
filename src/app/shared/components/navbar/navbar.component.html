@@ -1,11 +1,11 @@
-<nav class="navbar bg-black bg-body-tertiary">
+<nav class="navbar text-bg-dark">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+    <button class="navbar-toggler text-bg-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
       aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
+      <span class="navbar-toggler-icon text-bg-light"></span>
     </button>
-    <a class="navbar-brand" routerLink="/">FleetHub</a>
-    <a class="navbar-brand" routerLink="/login"><span class="material-symbols-outlined">logout</span></a>
+    <a class="navbar-brand text-bg-dark" routerLink="/home">FleetHub</a>
+    <a class="navbar-brand text-bg-dark" routerLink="/login"><span class="material-symbols-outlined">logout</span></a>
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Olá {{usuario.firstName}}!</h5>
@@ -17,7 +17,7 @@
             <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" routerLink="/listar-usuario">Lista de usuarios</a>
+            <a class="nav-link" routerLink="/listar-pessoas">Lista de usuarios</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
