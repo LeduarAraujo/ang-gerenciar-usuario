@@ -1,6 +1,6 @@
 export class Carro {
-  id: string;
-  carYear: number;
+  idCarro: string;
+  year: number;
   licensePlate: string;
   model: string;
   color: string;

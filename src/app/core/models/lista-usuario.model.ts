@@ -1,5 +1,5 @@
-import { Usuario } from "./usuario.model";
+import { DadosUsuario } from "./dados-usuario.model";
 
 export class ListaUsuario {
-  listUser: Usuario[];
+  listUser: DadosUsuario[];
 }

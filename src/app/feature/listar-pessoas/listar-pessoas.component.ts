@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { ListaUsuario } from 'src/app/core/models/lista-usuario.model';
 import { Usuario } from 'src/app/core/models/usuario.model';
 import { AtomicoService } from 'src/app/core/services/atomico.service';
 
@@ -13,10 +14,13 @@ export class ListarPessoasComponent {
   usuario: Usuario = new Usuario();
   token: { token_jwt: string };
 
+  listaUsuarios: ListaUsuario = new ListaUsuario();
+
   constructor(
     private router: Router,
     private atomService: AtomicoService) {
-    this.validarSessao();
+    // this.validarSessao();
+    this.montarTabelaListaUsuario();
   }
 
   validarSessao() {
@@ -43,4 +47,18 @@ export class ListarPessoasComponent {
     }
   }
 
+  montarTabelaListaUsuario() {
+    this.atomService.listarUsuarios().subscribe(
+      (retorno: ListaUsuario) => this.listaUsuarios = retorno,
+      err => this.router.navigate(['/login'])
+    );
+  }
+
+  formatarData(data: Date) {
+    return (new Date(data)).toLocaleDateString('pt-BR');
+  }
+
+  formatarDataHora(data: Date) {
+    return (new Date(data)).toLocaleTimeString('pt-BR');
+  }
 }

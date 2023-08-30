@@ -28,7 +28,7 @@ export class HomeComponent {
       this.atomService.getUsuarioLogado(this.token.token_jwt).subscribe(
         (retorno: Usuario) => {
           this.usuario = retorno;
-          this.router.navigate([], {state: this.token});
+          // this.router.navigate([], {state: this.token});
         },
         err => this.router.navigate(['/login'])
       );

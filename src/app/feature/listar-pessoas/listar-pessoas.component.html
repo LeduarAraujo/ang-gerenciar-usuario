@@ -1,7 +1,27 @@
 <app-navbar [usuario]='usuario' ></app-navbar>
 
-<div class="container">
-  <img class="container imgHome" src="./../../../assets/img/undraw_electric_car_b-7-hl.svg" alt="">
+<div class="">
+  <!-- <img class="container imgHome" src="./../../../assets/img/undraw_electric_car_b-7-hl.svg" alt=""> -->
+  <div class="container tabela-lista-usuario text-center">
+    <div class="row row-cols-8 tb-Titulo">
+      <div class="col tb-Titulo-right">Código de Usuário</div>
+      <div class="col tb-Titulo-right">Nome</div>
+      <div class="col tb-Titulo-right">Email</div>
+      <div class="col tb-Titulo-right">Data Nascimento</div>
+      <div class="col tb-Titulo-right">Login</div>
+      <div class="col tb-Titulo-right">Telefone</div>
+      <div class="col tb-Titulo-right">Data de criação</div>
+      <div class="col">Data de ultimo login</div>
+    </div>
+    <div *ngFor="let item of listaUsuarios.listUser" class="row row-cols-8 tb-row">
+      <div class="col tb-Titulo-right">{{item.idUsuario}}</div>
+      <div class="col tb-Titulo-right">{{item.firstName + ' ' + item.lastName}}</div>
+      <div class="col tb-Titulo-right">{{item.email}}</div>
+      <div class="col tb-Titulo-right">{{item.birthday}}</div>
+      <div class="col tb-Titulo-right">{{item.login}}</div>
+      <div class="col tb-Titulo-right">{{item.phone}}</div>
+      <div class="col tb-Titulo-right">{{formatarData(item.createdAt)}}</div>
+      <div class="col">{{formatarDataHora(item.lastLogin)}}</div>
+    </div>
+  </div>
 </div>
-
-
