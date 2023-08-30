@@ -10,19 +10,20 @@ export class UsuarioAdapter implements Adapter<Usuario> {
 
     // TODO: Verificar oque será retornado aqui no item.
       const usuario = item;
+      const retorno = new Usuario();
 
-      return new Usuario(
-        usuario.id,
-        usuario.firstName,
-        usuario.lastName,
-        usuario.email,
-        usuario.birthday,
-        usuario.login,
-        usuario.password,
-        usuario.phone,
-        usuario.cars,
-        usuario.createdAt,
-        usuario.lastLogin
-      )
+      retorno.id = usuario.id;
+      retorno.firstName = usuario.firstName;
+      retorno.lastName = usuario.lastName;
+      retorno.email = usuario.email;
+      retorno.birthday = usuario.birthday;
+      retorno.login = usuario.login;
+      retorno.password = usuario.password;
+      retorno.phone = usuario.phone;
+      retorno.cars = usuario.cars;
+      retorno.createdAt = usuario.createdAt;
+      retorno.lastLogin = usuario.lastLogin;
+
+      return retorno;
   }
 }

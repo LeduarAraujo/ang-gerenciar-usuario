@@ -1,0 +1,111 @@
+.main-head {
+  background: #FFF;
+}
+
+.sidenav {
+  height: 100%;
+  background-color: #000;
+  // background-color: red;
+  overflow-x: hidden;
+}
+
+.main {
+  padding: 0px 10px;
+  height: 100%;
+}
+
+.login-main-text {
+  color: #fff;
+}
+
+.login-main-text h2 {
+  font-weight: 300;
+}
+
+.btn-black {
+  background-color: #000 !important;
+  color: #fff;
+}
+
+.spaceTopButtom {
+  margin-top: 0.5rem;
+}
+
+.spaceButtom {
+  margin-left: 0.2rem;
+}
+
+.imgSideNav{
+  width: 20rem;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {
+    padding-top: 15px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .login-form {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 10%;
+  }
+
+  .login-main-text {
+    width: 100%;
+  }
+
+  .sidenav {
+    width: 100%;
+  }
+
+  .imgLogo {
+    width: 100%;
+  }
+
+  .imgSideNav, .txt-logo {
+    margin-left: 10%;
+  }
+
+  .spaceButtomVoltar {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .main {
+    margin-left: 40%;
+  }
+
+  .login-main-text {
+    margin-top: 5rem;
+  }
+
+  .imgLogo{
+    margin-left: 10%;
+  }
+
+  .sidenav {
+    width: 40%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+  }
+
+  .login-form {
+    margin-top: 80%;
+  }
+
+  .register-form {
+    margin-top: 20%;
+  }
+
+  .spaceButtomVoltar {
+    margin-right: 7rem;
+  }
+}
+
+

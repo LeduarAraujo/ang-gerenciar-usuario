@@ -1,1 +1,50 @@
-<p>cadastro works!</p>
+<div class="sidenav">
+  <div class="login-main-text">
+    <a routerLink="/" class="imgLogo">
+      <img class="imgSideNav" src="./../../../assets/img/Commercial_Event_Animated_Logo_in_Black_White_Bold_Gradient_Style.gif">
+    </a>
+    <p class="txt-logo">Tudo oque você precisar temos aqui.</p>
+  </div>
+</div>
+<div class="main">
+  <div class="col-md-6 col-sm-12">
+    <div class="login-form">
+      <form #formCadastro="ngForm" (ngSubmit)="cadastrar(formCadastro)">
+
+        <div class="form-group">
+          <label>Nome</label>
+          <input [(ngModel)]="usuario.firstName" type="text" name="firstName" id="firstName" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Sobrenome</label>
+          <input [(ngModel)]="usuario.lastName" type="text" name="lastName" id="lastName" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input [(ngModel)]="usuario.email" type="email" name="email" id="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Data de Aniversário</label>
+          <input [(ngModel)]="usuario.birthday" type="date" name="birthday" id="birthday" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Login</label>
+          <input [(ngModel)]="usuario.login" type="text" name="login" id="login" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Senha</label>
+          <input [(ngModel)]="usuario.password" type="password" name="password" id="password" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>Telefone</label>
+          <input [(ngModel)]="usuario.phone" type="text" name="phone" id="phone" class="form-control">
+        </div>
+
+        <div class="spaceTopButtom">
+          <a routerLink="/" class="spaceButtomVoltar">	&lt; Voltar</a>
+          <button type="submit" class="btn btn-black">Confirmar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
