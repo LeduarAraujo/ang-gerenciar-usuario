@@ -25,7 +25,7 @@ export class HomeComponent {
 
     if (token) {
       this.atomService.getUsuarioLogado(token.token_jwt).subscribe(
-        (retorno: Usuario) => this.prepararSessao(retorno),
+        (retorno: Usuario) => this.prepararSessao(retorno, token.token_jwt),
         err => this.router.navigate(['login'])
       );
     } else {
@@ -33,9 +33,9 @@ export class HomeComponent {
     }
   }
 
-  prepararSessao(retorno: Usuario) {
+  prepararSessao(retorno: Usuario, token: string) {
     this.router.navigate(['home'],
-      { state: JSON.parse(JSON.stringify(retorno)) }
+      { state: {'usuario': JSON.parse(JSON.stringify(retorno)), 'token': token} }
     );
 
     this.usuario = retorno;

@@ -1,25 +1,11 @@
-<!-- <nav class="navbar bg-black ">
-  <div class="container-fluid ">
-    <a class="navbar-brand" routerLink="/">
-      <img src="./../../../../assets/img/undraw_towing_re_wesa.svg" alt="Logo" width="30" height="24" class="d-inline-block align-text-top">
-      <span class="text-white">Bootstrap</span>
-    </a>
-  </div>
-</nav> -->
-
-
-<nav class="navbar bg-black bg-body-tertiary fixed-top">
+<nav class="navbar bg-black bg-body-tertiary">
   <div class="container-fluid">
-    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <a class="navbar-brand" routerLink="/">FleetHub</a>
-
     <a class="navbar-brand" routerLink="/login"><span class="material-symbols-outlined">logout</span></a>
-
-
-
-
     <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
       <div class="offcanvas-header">
         <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Olá {{usuario.firstName}}!</h5>
@@ -31,26 +17,30 @@
             <a class="nav-link active" aria-current="page" routerLink="/home">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" routerLink="/listar-pessoas">Lista de usuarios</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-              Dropdown
+              Gerenciar Veículos
             </a>
             <ul class="dropdown-menu">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li>
-                <hr class="dropdown-divider">
-              </li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
+              <li><a class="dropdown-item" routerLink="/">Listar Veículos</a></li>
+              <li><a class="dropdown-item" routerLink="/">Incluir novo Veículo</a></li>
+              <li><a class="dropdown-item" routerLink="/">Alterar Veículo</a></li>
+              <li><a class="dropdown-item" routerLink="/">Remover Veículo</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Gerenciar Usuários
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" routerLink="/">Listar Usuários</a></li>
+              <li><a class="dropdown-item" routerLink="/">Alterar Usuário</a></li>
+              <li><a class="dropdown-item" routerLink="/">Remover Usuário</a></li>
             </ul>
           </li>
         </ul>
-        <form class="d-flex mt-3" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
       </div>
     </div>
   </div>
