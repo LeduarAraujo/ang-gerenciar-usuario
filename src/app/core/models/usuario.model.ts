@@ -9,7 +9,7 @@ export class Usuario {
   public login: string;
   public password: string;
   public phone: string;
-  public cars: Carro;
+  public cars: Carro[];
   public createdAt: Date;
   public lastLogin: Date;
 }

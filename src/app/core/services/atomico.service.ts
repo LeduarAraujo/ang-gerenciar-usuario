@@ -6,6 +6,7 @@ import { TokenAdapter } from '../adapters/token.adapter';
 import { ListaUsuario } from '../models/lista-usuario.model';
 import { ListaUsuarioAdapter } from '../adapters/listaUsuario.adapter';
 import { Usuario } from '../models/usuario.model';
+import { SucessMessage } from '../models/sucess-message.model';
 
 @Injectable({
   providedIn: 'root'
@@ -41,20 +42,14 @@ export class AtomicoService {
     return this.http.get<Usuario>(url, {headers: headers});
   }
 
+  cadastrarUsuario(usuario: Usuario) {
+    const url = '/v1/api/users';
+    let headers = new HttpHeaders({
+      'Content-Type': 'application/json; charset=utf-8'
+    });
 
-  // listarUsuarios(usuario?: string, senha?: string) {
-  //   const url = '/v1/api/users';
-  //   let headers = new HttpHeaders();
-  //   headers = headers.set('Content-Type', 'application/json; charset=utf-8');
-
-  //   // const body = JSON.stringify({username: usuario,
-  //   //   password: senha});
-  //   // this.http.post(url, body, {headers: headers})
-
-  //   debugger
-  //   return this.http.get<ListaUsuario>(url, {headers: headers}).pipe(
-  //     map(response => this.listaUsuarioAdapter.adapt(response))
-  //   );
-  // }
+    return this.http.post<SucessMessage>(url, JSON.stringify(usuario),
+      {headers: headers});
+  }
 
 }
