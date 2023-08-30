@@ -5,11 +5,11 @@ import { Usuario } from 'src/app/core/models/usuario.model';
 import { AtomicoService } from 'src/app/core/services/atomico.service';
 
 @Component({
-  selector: 'app-listar-pessoas',
-  templateUrl: './listar-pessoas.component.html',
-  styleUrls: ['./listar-pessoas.component.scss']
+  selector: 'app-listar-usuario',
+  templateUrl: './listar-usuario.component.html',
+  styleUrls: ['./listar-usuario.component.scss']
 })
-export class ListarPessoasComponent {
+export class ListarUsuarioComponent {
 
   usuario: Usuario = new Usuario();
   token: { token_jwt: string };
