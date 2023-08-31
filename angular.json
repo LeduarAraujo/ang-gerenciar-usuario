@@ -65,12 +65,12 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
             "browserTarget": "app:build",
-            "proxyConfig": "./proxy.conf.json"
+            "proxyConfig": "src/proxy.conf.json"
           },
           "configurations": {
             "production": {
               "browserTarget": "ang-gerenciar-usuario:build:production",
-              "proxyConfig": "./proxy.conf.json"
+              "proxyConfig": "src/proxy.conf.json"
             },
             "development": {
               "browserTarget": "ang-gerenciar-usuario:build:development"
