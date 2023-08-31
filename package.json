@@ -6,7 +6,7 @@
     "start": "concurrently --kill-others \"npm run server\" \"ng serve --proxy-config proxy.conf.json\" ",
     "dev": "ng serve --proxy-config proxy.conf.json",
     "server": "nodemon ./server/app.js",
-    "build": "ng build",
+    "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "ngh": "ngh --dir=dist/ang-gerenciar-usuario",
