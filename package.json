@@ -4,8 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "concurrently --kill-others \"npm run server\" \"ng serve --proxy-config proxy.conf.json\" ",
+    "dev": "ng serve --proxy-config proxy.conf.json",
     "server": "nodemon ./server/app.js",
-    "build": "ng build",
+    "build": "ng build --proxy-config proxy.conf.json",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "ngh": "ngh --dir=dist/ang-gerenciar-usuario",
