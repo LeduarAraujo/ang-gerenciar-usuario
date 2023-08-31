@@ -3,8 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "concurrently --kill-others \"npm run server\" \"ng serve --proxy-config proxy.conf.json\" ",
-    "dev": "ng serve --proxy-config proxy.conf.json",
+    "start": "ng serve --proxy-config proxy.conf.json",
     "server": "nodemon ./server/app.js",
     "build": "ng build --configuration=production",
     "watch": "ng build --watch --configuration development",
