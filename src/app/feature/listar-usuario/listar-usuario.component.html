@@ -1,0 +1,25 @@
+<app-navbar [usuario]='usuario'></app-navbar>
+
+<h1 class="container margem-titulo">Lista de usuários</h1>
+<table class="container">
+  <tr class="container tabela-lista-usuario text-center">
+    <td class="p-4 mb-5 text-bg-secondary">Código</td>
+    <td class="p-4 mb-5 text-bg-secondary">Nome</td>
+    <td class="p-4 mb-5 text-bg-secondary">Email</td>
+    <td class="p-4 mb-5 text-bg-secondary">Nascimento</td>
+    <td class="p-4 mb-5 text-bg-secondary">Login</td>
+    <td class="p-4 mb-5 text-bg-secondary">Telefone</td>
+    <td class="p-4 mb-5 text-bg-secondary">Data de Cadastro</td>
+    <td class="p-4 mb-5 text-bg-secondary">Ultimo Login</td>
+  </tr>
+  <tr *ngFor="let item of listaUsuarios.listUser" class="container text-center border border-primary-subtle">
+    <td class="p-2">{{item.idUsuario}}</td>
+    <td class="p-2">{{item.firstName}}</td>
+    <td class="p-2">{{item.email}}</td>
+    <td class="p-2">{{item.birthday}}</td>
+    <td class="p-2">{{item.login}}</td>
+    <td class="p-2">{{item.phone}}</td>
+    <td class="p-2">{{formatarData(item.createdAt)}}</td>
+    <td class="p-2">{{formatarData(item.lastLogin)}}</td>
+  </tr>
+</table>

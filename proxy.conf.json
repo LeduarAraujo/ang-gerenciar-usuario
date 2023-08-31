@@ -1,6 +1,6 @@
 {
     "/v1/*": {
-        "target": "http://localhost:8080",
+        "target": "https://atom-gerenciar-usuario-b8e69c09b674.herokuapp.com",
         "secure": true,
         "changeOrigin": true,
         "logLevel": "debug",

@@ -25,7 +25,7 @@ export class LoginComponent {
       this.usuario.password
     ).subscribe(
       (retorno: string) =>
-      this.router.navigate(['home'],
+      this.router.navigate(['/home'],
         {state: JSON.parse(JSON.stringify(retorno))}
       ),
       err => this.msgErro = err.error.message
